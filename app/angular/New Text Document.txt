@@ -1,0 +1,66 @@
+      hr(style='border: 1px solid white;')
+      h3 Trekking/camping/canoeing
+      br
+      h3 Fixing and riding my 1982 Honda Hobbit moped!
+      br
+      h3 Hockey/soccer/weightlifting/biking
+      br
+      h3 Guitar/ukulele and jamming with my piano-playing wife
+      br
+      h3 Small-plot gardening
+
+
+
+
+
+data = {
+            labels: ["TEST2","Benchmarking","Utility Services","Energy Modelling","Energy Surveys","Visualization"],
+            datasets: [
+              {
+                label: "My First dataset",
+                fillColor: "rgba(255,255,255,0.2)",
+                strokeColor: "rgba(255,255,255,1)",
+                pointColor: "rgba(255,255,255,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(255,255,255,1)",
+                data: [4, 5, 5, 3, 4, 3]
+              }
+            ] 
+          };
+          charts[s].chartOptions.pointLabelFontSize = 16;
+          charts[s].chartOptions.pointLabelFontColor = '#FFFFFF';
+          charts[s].chartOptions.maintainAspectRatio = false;
+          
+          // Custom tooltip
+          charts[s].chartOptions.customTooltips = function(tooltip){
+            var tooltipEl = jQuery('#chartjs-tooltip');
+
+            if (!tooltip) {
+              tooltipEl.css({ opacity: 0 });
+              return;
+            }
+
+            else if (!customLabels2[tooltip.text.substr(0,tooltip.text.indexOf(':'))]) {
+              tooltipEl.css({ opacity: 0 });
+              return;
+            }
+
+            tooltipEl.removeClass('above below');
+            tooltipEl.addClass(tooltip.yAlign);
+            
+            tooltipEl.html('<div class="chartjs-tooltip-section"><span class="chartjs-tooltip-value">' + customLabels2[tooltip.text.substr(0,tooltip.text.indexOf(':'))] + '</span></div>');
+
+            tooltipEl.css({
+                opacity: 1,
+                left: (jQuery('.carosel')[0].offsetLeft + tooltip.x + 5) + 'px',
+                top: tooltip.chart.canvas.offsetTop + 50 + tooltip.y + 'px',
+                fontFamily: tooltip.fontFamily,
+                fontSize: tooltip.fontSize,
+                fontStyle: tooltip.fontStyle,
+            });
+            
+          }
+
+          charts[s].myChart = new Chart(charts[s].ctx).Radar(data, charts[s].chartOptions);
+          break;

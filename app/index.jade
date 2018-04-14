@@ -1,0 +1,33 @@
+doctype html
+
+html.no-js(lang='en', ng-app='bkApp', ng-cloak)
+
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='mobile-web-app-capable', content='yes')
+    link(rel='stylesheet', href='/foundation/css/foundation.css')
+    link(rel='stylesheet', href='/icons/css/font-awesome.css')
+    link(rel='stylesheet', href='/slick/slick.css')
+    link(rel='stylesheet', href='/slick/slick-theme.css')
+    link(rel='stylesheet', href='/custom/main.css')
+    script(src='/foundation/js/vendor/modernizr.js')
+    script(src='/foundation/js/vendor/fastclick.js')
+    title='Brett Kerrigan'
+    base(href='/')
+
+  body(style='background:rgba(0,0,0,0.5)')
+    .ng-view.page(style='height:100%;')
+      
+  script(src='/foundation/js/vendor/jquery.js')
+  script(src='/foundation/js/foundation.min.js')
+  script(src='/angular/angular.min.js')
+  script(src='/angular/angular-route.min.js')
+  script(src='/angular/angular-animate.min.js')
+  script(src='/chartjs/Chart.min.js')
+  script(src='/slick/slick.min.js')
+  
+  script(src='app/angular/init.js')
+  script(src='app/angular/controller.js')  
