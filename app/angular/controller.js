@@ -32,11 +32,11 @@ angular.module('bkApp')
   }
 
   var customLabels2 = {
-    'Data Analytics' : 'Python<br>R<br>SAS<br>Excel/VBA<br>Selenium<br>Basic SciKit-Learn<br>Basic Natural Language Toolkit<br>Basic MongoDB',
-    'Visualization' : 'Tableau<br>matplotlib<br>Plotly<br>Bokeh<br>Excel<br>Basic D3.js',
-    'Network Analysis' : 'Optimal Power Flow (Linear and Mixed-Integer programming)<br>Long Term Network Planning - Natural Gas Peak Demand',
+    'Analytical Tools' : 'Python<br>R<br>SAS<br>Excel/VBA<br>Selenium<br>Basic SciKit-Learn<br>Basic MongoDB',
+    'Data Visualization' : 'Tableau<br>matplotlib<br>Plotly<br>Bokeh<br>Excel<br>Basic D3.js',
+    'Network Analysis' : 'Optimal Power Flow (Linear and Mixed-Integer programming)<br>Grid Integration Studies<br>Long Term Resource Planning - Natural Gas Peak Demand',
     'Building Modelling' : 'eQuest, DOE + some Open Studio<br>LEED and Code Compliance Modelling<br>Integrated Design Charrettes',
-    'Energy Data Collection' : 'Statistically representative surveys<br>Municipal building energy benchmarking programs<br>ENERGY STAR Building Benchmarking Score development (with NRCan)'
+    'Energy Data Projects' : 'Statistically representative surveys<br>Municipal building energy benchmarking programs<br>ENERGY STAR Scores for Commercial Buildings (with NRCan)'
   }
 
   //Carosel
@@ -131,7 +131,7 @@ angular.module('bkApp')
         // Radar Chart
         case 2:
           data = {
-            labels: ["Data Analytics","Visualization","Network Analysis","Building Modelling","Energy Data Collection"],
+            labels: ["Analytical Tools","Data Visualization","Network Analysis","Building Modelling","Energy Data Projects"],
             datasets: [
               {
                 label: "My First dataset",
